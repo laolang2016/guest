@@ -2,6 +2,8 @@
 // 对首页授权调用includes下的文件
 define('IN_TG', true);
 
+//表明本页
+define('SCRIPT', 'index');
 // 引入公共文件
 require dirname(__FILE__) . '/includes/common.inc.php';
 ?>
@@ -11,9 +13,9 @@ require dirname(__FILE__) . '/includes/common.inc.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>多用户留言系统--首页</title>
-<link rel="stylesheet" type="text/css" href="style/basic/basic.css">
-<link rel="stylesheet" type="text/css" href="style/basic/index.css">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<?php
+    require ROOT_PATH.'includes/title.inc.php';
+?>
 </head>
 
 

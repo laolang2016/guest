@@ -2,6 +2,9 @@
 // 对首页授权调用includes下的文件
 define('IN_TG', true);
 
+//本页常量
+define('SCRIPT', 'register');
+
 // 引入公共文件
 require dirname(__FILE__) . '/includes/common.inc.php';
 // echo sayHello();
@@ -12,9 +15,10 @@ require dirname(__FILE__) . '/includes/common.inc.php';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>多用户留言系统--注册</title>
-<link rel="stylesheet" type="text/css" href="style/basic/basic.css">
-<link rel="stylesheet" type="text/css" href="style/basic/register.css">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<script type="text/javascript" src="js/face.js"></script>
+<?php
+    require ROOT_PATH.'includes/title.inc.php';
+?>
 </head>
 
 <body>
@@ -35,7 +39,7 @@ require dirname(__FILE__) . '/includes/common.inc.php';
                 <dd>密码提示：<input type="text" name="pwdt" class="text"/>(*必填，至少两位)</dd>
                 <dd>密码回答：<input type="text" name="pwdd" class="text"/>(*必填，至少两位)</dd>
                 <dd>性　　别：<input type="radio" name="sex" value="男" checked="checked"/>男　　<input type="radio" name="sex" value="女"/>女</dd>
-                <dd class="face"><img alt="头像选择" src="./face/m01.gif" onclick="javascript:window.open('open.php','face','width=400,height=400,top=0,left=0')" /></dd>
+                <dd class="face"><img id="faceimg" alt="头像选择" src="./face/m01.gif" /></dd>
                 <dd>电子邮件：<input type="text" name="email" class="text"/></dd>
                 <dd>　Q Q　：<input type="text" name="qq" class="text"/></dd>
                 <dd>个人主页：<input type="text" name="personpage" value="http://" class="text"/></dd>
