@@ -10,7 +10,7 @@ require dirname(__FILE__) . '/includes/common.inc.php';
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>多用户留言系统</title>
+<title>多用户留言系统--首页</title>
 <link rel="stylesheet" type="text/css" href="style/basic/basic.css">
 <link rel="stylesheet" type="text/css" href="style/basic/index.css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">

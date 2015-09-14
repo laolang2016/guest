@@ -45,6 +45,17 @@ h2{
 #header ul li{
 	display:inline;
 }
+
+#header ul li a{
+	text-decoration: none;
+	color:#333;
+}
+
+#header ul li a:HOVER{
+	text-decoration: underline;
+	color:#f00;
+}
+
 #header h1 a{
 	width:210px;
 	height:39px;
@@ -60,12 +71,18 @@ h2{
 	padding:10px 0 0 0;
 }
 
+/**
+ * 版权文字样式
+ */
 #footer p{
 	font-size:12px;
 	letter-spacing:1px;
 	padding:5px 0 0 0 ;
 }
 
+/**
+ * 老狼
+ */
 #footer span{
 	color:#06f;
 }

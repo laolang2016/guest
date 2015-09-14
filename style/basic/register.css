@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+#register{
+	width:auto;
+	height:600px;
+	border: 1px solid #ccc;
+	font-size:12px;
+}
+
+#register h2{
+	text-indent: 0;
+	text-align: center;
+}
+
+#register dl{
+	width:400px;
+	margin: 0 auto;
+}
+
+#register dl dt{
+	text-align: center;
+	padding:10px 0;
+	font-weight: bold;
+}
+
+#register dl dd{
+	padding:5px 0;
+}
+
+/**
+ * 头像选择，居中
+ */
+#register dl dd.face{
+	padding:5px 0 5px 120px;
+}
+
+/**
+ * 鼠标移动到头像上变为小手形状
+ */
+#register dl dd.face img {
+	cursor: pointer;
+}
+
+/**
+ * 文本框
+ */
+
+#register dl dd input.text{
+	width:220px;
+	height:19px;
+	border:1px dashed #333;
+	background-color: white;
+}
+
+
+
+/**
+ * 验证码
+ */
+
+#register dl dd input.yzm{
+	width:60px;
+}
+
+/**
+ * 注册按钮
+ */
+#register dl dd input.submit{
+	width:60px;
+	height:19px;
+	border:1px dashed #333;
+	cursor:pointer;
+	margin:0 0 0 130px;
+	background-color: white;
+}
+
