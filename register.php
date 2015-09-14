@@ -30,7 +30,7 @@ require dirname(__FILE__) . '/includes/common.inc.php';
     
     <div id="register">
         <h2>注册</h2>
-        <form method="post" action="post.php">
+        <form method="post" name="register" action="post.php">
             <dl>
                 <dt>请认真填写以下内容</dt>
                 <dd>用 户 名 ： <input type="text" name="username" class="text"/>(*必填，至少两位)</dd>
@@ -39,7 +39,7 @@ require dirname(__FILE__) . '/includes/common.inc.php';
                 <dd>密码提示：<input type="text" name="pwdt" class="text"/>(*必填，至少两位)</dd>
                 <dd>密码回答：<input type="text" name="pwdd" class="text"/>(*必填，至少两位)</dd>
                 <dd>性　　别：<input type="radio" name="sex" value="男" checked="checked"/>男　　<input type="radio" name="sex" value="女"/>女</dd>
-                <dd class="face"><img id="faceimg" alt="头像选择" src="./face/m01.gif" /></dd>
+                <dd class="face"><input type="hidden" name="face" value="face/m01.gif" /><img src="face/m01.gif" alt="头像选择" id="faceimg" /></dd>
                 <dd>电子邮件：<input type="text" name="email" class="text"/></dd>
                 <dd>　Q Q　：<input type="text" name="qq" class="text"/></dd>
                 <dd>个人主页：<input type="text" name="personpage" value="http://" class="text"/></dd>
