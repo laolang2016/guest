@@ -1,4 +1,7 @@
 <?php
+// 修改错误提示级别
+error_reporting(E_ALL & ~E_NOTICE);
+
 // 对首页授权调用includes下的文件
 define('IN_TG', true);
 
@@ -8,6 +11,7 @@ define('SCRIPT', 'register');
 // 引入公共文件
 require dirname(__FILE__) . '/includes/common.inc.php';
 // echo sayHello();
+
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
@@ -43,7 +47,7 @@ require dirname(__FILE__) . '/includes/common.inc.php';
                 <dd>电子邮件：<input type="text" name="email" class="text"/></dd>
                 <dd>　Q Q　：<input type="text" name="qq" class="text"/></dd>
                 <dd>个人主页：<input type="text" name="personpage" value="http://" class="text"/></dd>
-                <dd>验 证 码： <input type="text" name="yzm" class="text yzm"/></dd>
+                <dd>验 证 码： <input type="text" name="yzm" class="text yzm"/><img id="code" src="code.php" /></dd>
                 <dd><input type="submit" value="注册" class="submit"/></dd>
             </dl>
         </form>

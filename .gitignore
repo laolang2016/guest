@@ -1,0 +1,4 @@
+# 忽略zend studio 自动产生的文件和文件夹
+.buildpath
+.project
+.settings
