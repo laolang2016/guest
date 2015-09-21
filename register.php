@@ -22,11 +22,13 @@ if ('register' == $_GET['action']) {
     //引入验证文件
     include ROOT_PATH.'includes/register.func.php';
     
-    // 创建一个空数组，用来存放提交过来的合法数据
-    $_clean = array();
-    $_clean['username'] = _check_username($_POST['username'],2,20);
-    $_clean['password'] = $_POST['password'];
-    print_r($_clean);
+    //创建一个空数组，用来存放提交过来的合法数据
+	$_clean = array();
+	$_clean['username'] = _check_username($_POST['username'],2,20);
+	$_clean['password'] = _check_password($_POST['password'],$_POST['notpassword'],6);
+	$_clean['question'] = _check_question($_POST['question'],2,20);
+	$_clean['answer'] = _check_answer($_POST['question'],$_POST['answer'],2,20);
+	print_r($_clean);
 }
 
 ?>
@@ -59,16 +61,16 @@ require ROOT_PATH . 'includes/title.inc.php';
 				用 户 名 ： <input type="text" name="username" class="text" />(*必填，至少两位)
 			</dd>
 			<dd>
-				密 码：<input type="password" name="userpwd" class="text" />(*必填，至少六位)
+				密 码：<input type="password" name="password" class="text" />(*必填，至少六位)
 			</dd>
 			<dd>
-				确认密码：<input type="password" name="notuserpwd" class="text" />(*必填，同上)
+				确认密码：<input type="password" name="notpassword" class="text" />(*必填，同上)
 			</dd>
 			<dd>
-				密码提示：<input type="text" name="pwdt" class="text" />(*必填，至少两位)
+				密码提示：<input type="text" name="question" class="text" />(*必填，至少两位)
 			</dd>
 			<dd>
-				密码回答：<input type="text" name="pwdd" class="text" />(*必填，至少两位)
+				密码回答：<input type="text" name="answer" class="text" />(*必填，至少两位)
 			</dd>
 			<dd>
 				性 别：<input type="radio" name="sex" value="男" checked="checked" />男 <input
