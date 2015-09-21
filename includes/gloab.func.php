@@ -1,5 +1,11 @@
 <?php
 
+
+function _alert_back($_info) {
+    echo "<script type='text/javascript'>alert('".$_info."');history.back();</script>";
+    exit();
+}
+
 /**
  * 核心函数库
  */
