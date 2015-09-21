@@ -1,6 +1,11 @@
 <?php
 
-
+/**
+ * js 弹窗，返回页面的上一个历史
+ * @access public
+ * @param unknown $_info 要显示的信息
+ * @return void
+ */
 function _alert_back($_info) {
     echo "<script type='text/javascript'>alert('".$_info."');history.back();</script>";
     exit();
